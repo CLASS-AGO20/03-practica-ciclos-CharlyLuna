@@ -7,9 +7,21 @@ export default class App {
         }
         return factor;
     }
+
+    convertirAString(numero) {
+        let i = 1;
+        let asterisco = "";
+        while(i <= numero) {
+            asterisco = asterisco + "*";
+            i++;
+        }
+        return asterisco;
+    }
 }
 
 let app = new App();
 
 //Comprobacion factorial
 console.log(app.factorial(5));
+//Comprobacion convertirAString
+console.log(app.convertirAString(5));
