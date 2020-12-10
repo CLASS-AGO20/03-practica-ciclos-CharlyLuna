@@ -17,6 +17,18 @@ export default class App {
         }
         return asterisco;
     }
+
+    obtenerDivisibles(numero) {
+        let i = 1;
+        let divisibles = 0;
+        do {
+            if(numero % i === 0) {
+                divisibles = divisibles + 1;
+            }
+            i++;
+        } while(i <= numero);
+        return divisibles;
+    }
 }
 
 let app = new App();
@@ -25,3 +37,5 @@ let app = new App();
 console.log(app.factorial(5));
 //Comprobacion convertirAString
 console.log(app.convertirAString(5));
+//Comprobacion obtenerDivisibles
+console.log(app.obtenerDivisibles(6));
