@@ -29,6 +29,15 @@ export default class App {
         } while(i <= numero);
         return divisibles;
     }
+
+    elevar(numero,potencia) {
+        
+        let numeroPotencia = 1;
+        for(let i = 1;i <= potencia; i++) {
+            numeroPotencia = numeroPotencia * numero;
+        }
+        return numeroPotencia;
+    }
 }
 
 let app = new App();
@@ -39,3 +48,5 @@ console.log(app.factorial(5));
 console.log(app.convertirAString(5));
 //Comprobacion obtenerDivisibles
 console.log(app.obtenerDivisibles(6));
+//Comprobacion elevar
+console.log(app.elevar(3,4));
